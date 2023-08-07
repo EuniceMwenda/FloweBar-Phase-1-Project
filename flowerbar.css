@@ -1,0 +1,271 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: ;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+
+
+.header{
+  background:black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 7%;
+  border-bottom: var(--border);
+  position: right;
+  top: 0;left: 0; right: 0 ;
+  z-index: 1000 ;
+}
+
+.header .logo img{ height: 130px; 
+
+}
+
+.header .navbar a{
+  margin: 0 1rem;
+  font-size:20px;
+  color: white;
+}
+
+.header .navbar a:hover{
+  color:green;
+  border-bottom: 16px solid var(--main-color) ;
+  padding-bottom:  80px;
+
+
+} 
+
+.header .icons div{
+color:white ;
+cursor:pointer ;
+font-size: 20px;
+margin-left: 32px;
+}
+
+.home{
+  min-height: 75vh;
+  font-display: flex;
+  align-items: center;
+  background:url(Images/pexels-photo-1083822.jpeg ) ;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#OtherHome{
+  min-height: 75vh;
+  background:url(Images/pexels-photo-1083822.jpeg ) ;
+  background-size: cover;
+  background-position: center;
+  position: relatives;
+  
+ 
+}
+
+#infoSection{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#OtherHome h3{
+  font-size: 60px;
+ 
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  
+}
+
+
+#OtherHome p{
+  font-size: 40px;
+  font-weight: lighter;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.8;
+  color: floralwhite;
+  padding: 1rem 0;
+  word-wrap: break-word;
+  flex-direction: column;
+  
+}
+
+
+#products{
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.8;
+  color:  black;
+  padding: 1rem 0;
+  
+}
+
+.products .box-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.products .box-container .box{
+  padding: 20px;
+  text-align: center;
+  border: 1px  rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+ 
+}
+
+.products .box-container .box img{
+  height: 10rem;
+}
+
+.products .box-container .box h3{
+  color:black;
+  font-size: 2rem;
+  padding:1rem 0 ;
+  font-weight: lighter;
+}
+
+.products .box-container .box price{
+  color: black;
+  font-size: 2.5rem;
+  padding: 5rem 0;
+}
+
+
+
+#review{
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.8;
+  color:  black;
+  padding: 1rem 0;
+  background-color: rgb(251, 245, 246);
+
+  
+}
+
+.review .box-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+ 
+  
+ 
+
+}
+
+.review .box-container .box{
+  text-align: center;
+  border: 1px; 
+  padding: 20px;
+ 
+}
+
+
+.review .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: black;
+  padding: 2rem 0;
+}
+
+.review .box-container .box .user{
+height: 7rem;
+width: 7rem;
+border-radius: 50%;
+object-fit: cover;
+  
+}
+
+.review .box-container .box h3{
+  color:black;
+  font-size: 2rem;
+  padding:1rem 0 ;
+  font-weight: lighter;
+}
+
+
+.review .box-container .box .star i{
+  color:black;
+  font-size: 2rem;
+
+}
+
+
+
+footer{
+
+  font-weight: bold;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.8;
+  color:  black;
+  padding: 1rem 0;
+  
+
+}
+    
+.footer .box-container{
+  display: flex;
+  padding: 3rem;
+  grid-template-columns: auto auto auto;
+  
+
+}
+
+.footer .box-container .left section{
+  flex-basis: 50%;
+  padding:0 20px;
+ 
+}
+
+
+
+.footer .box-container .box{
+  text-align: center;
+  border: 1px; 
+  padding: 20px;
+ 
+}
+
+
+.review .box-container .box h2{
+  color:black;
+  font-size: 2rem;
+  padding:1rem 0 ;
+  font-weight: lighter;
+}
+
+.review .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: black;
+  padding: 2rem 0;
+}
+
+.review .box-container .box .social{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+    
+  }
