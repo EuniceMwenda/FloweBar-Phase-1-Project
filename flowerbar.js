@@ -68,10 +68,10 @@ navbar.forEach(navbar => {
   });
 });
 
-const button = document.getElementById('myemail');
+const emailAdress = document.getElementById('myemail');
 
-button.addEventListener('click', function() {
-  alert('Input email');
+emailAdress .addEventListener('click', function() {
+  alert('Enter valid email address');
 });
 
 
