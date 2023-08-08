@@ -8,6 +8,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
+ 
+
   <link rel="stylesheet" href="flowerbar.css">
 
 
@@ -29,10 +31,10 @@
       </nav>
 
 
-      <div class="icons">
-        <div class="fa fa-search" id="search-btn"></div>
-        <div class="fa fa-shopping-cart" id="cart-btn"></div>
-        <div class="fa fa-bars" id="products-btn"></div>
+      <div class="icons" style="display: flex;  align-items: center; ">
+        <div class="fa fa-shopping-cart" ></div>
+        <div id="cartItems">0</div>
+       </div>
 
 
     </header>
@@ -180,7 +182,7 @@
                 <div class="left section">
                     <h2>About Us</h2>
                     <div class="box">
-                        <p>FlowerBar is an online flower e-commerce platform where customers can browse and purchase a wide variety of beautiful blooms. As a leading floral store in Kenya, FlowerBar has blossomed over the years and earned a reputation as the country's favorite destination for all things floral. </p>
+                        <p>FlowerBar is an online flower e-commerce platform where customers can browse and purchase a wide variety of beautiful flowers and plants. As a leading floral store in Kenya, FlowerBar has blossomed over the years and earned a reputation as the country's favorite destination for all things floral. </p>
                     <div class="social">
                         <a href="https://flowerbar.com"><span class="fab fa-facebook-f"></span></a>
                         <a href="https://instagram.com/flowerbar"><span class="fab fa-instagram"></span></a>
@@ -215,7 +217,7 @@
                                 <div class="text">Email*</div>
                             </div>
                             <input type="email" required>
-                            <div class="btn">
+                            <div class="btn" id="myBtn">
                                 <button type="submit">SUBSCRIBE</button>
                             </div>
                         </form>
@@ -236,7 +238,8 @@
 
                   <!-- contact section ends here -->
 
-  
+                  
+
   <script src="./flowerbar.js"></script>
 </body>
 

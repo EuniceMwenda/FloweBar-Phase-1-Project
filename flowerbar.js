@@ -1,61 +1,78 @@
-const products = [{
-image: 'Images/valentines.jpg',
-name: 'Red Forever Roses',
-price: 6000
-},{
-  image: 'Images/newtulips.jpg',
-  name: 'Tulips bouquet',
-  price: 6000
-},{
-  image: 'Images/purple.jpg',
-  name: 'Color of love Bouquet',
-  price: 4500
-},{
-  image: 'Images/white.webp',
-  name: 'white Bouquet',
-  price: 5000
-},{
-  image: 'Images/mixed.jpg',
-  name: 'Abundance beauty',
-  price: 3500
-},{
-  image: 'Images/chocolate.jpg',
-  name: 'Lavish Flower Box',
-  price: 5000
-}];
+let allProducts=[]
+let cart=[]
 
-const cart = [];
+let cartItem=document.querySelector("#cartItems")
 
-let productsHTML ='';
 
-products.forEach((product)  => {
-  productsHTML += ` 
-  
-  <div class="box">
-  <img class="produt-image"
-  src="${product.image}" >
-  <h3 class="produt-name">${product.name}</h3>
-  <div class="price">${product.price}</div>
-  <a href="#" class="btn"  onclick="addToCart('${product.name}')" >add to cart</a>
-</div> 
-  
-  `; 
-  const productName =product.name
-cart.push(
-  {
-    productName:productName,
-    quantity: 1
+function setCartItems(){
+  cartItem.innerHTML=cart.length
+}
+
+
+
+
+fetch("https://perenual.com/api/species-list?page=1&key=sk-XaA264d253686b4da1801",{
+  method:"Get",
+  Headers:{
+    contentType:"application/json",
   }
-)
+})
+.then(function (response){
+  return response.json();
+})
+.then(function (data){
+  console.log(data)
+  let docs=data.data
+  let productsHTML ='';
+  allProducts=docs
+
+  for(i=0;i<docs.length;i++){
+    let doc=docs[i]
+    console.log()
+
+    if(doc.default_image===null || !doc.default_image.thumbnail){
+      continue
+    }
+
+    productsHTML += ` 
+  
+    <div class="box">
+    <img class="produt-image"
+    src="${doc.default_image.thumbnail}" >
+    <h3 class="produt-name">${doc.common_name}</h3>
+    <div class="price">Ksh ${Math.floor((Math.random() * 1000) + 200)}</div>
+    <a href="#" class="btn add-item-to-cart"  onclick="addToCart('${doc.id}')" >add to cart</a>
+  </div> 
+    
+    `; 
+  }
+  document.querySelector("#items_container").innerHTML=productsHTML
+  const btnaddTocart = document.querySelectorAll('.add-item-to-cart');
+
+btnaddTocart.forEach(btn => {
+  btn.addEventListener('click', function handleClick(event) {
+    console.log('button clicked', event);
+  });
+});
   
 });
 
 
+const navbar = document.querySelectorAll('.navbar');
 
-document.querySelector("#items_container").innerHTML=productsHTML
+navbar.forEach(navbar => {
+  navbar.addEventListener('click', function handleClick(event) {
+    console.log('navbar clicked', event);
 
-function addToCart(name){
-  console.log(cart);
- 
+    navbar.setAttribute('style', 'background-color: green;');
+  });
+});
+
+
+
+function addToCart(id){
+  
+cart.push(id)
+console.log(cart)
+setCartItems()
 }
-
