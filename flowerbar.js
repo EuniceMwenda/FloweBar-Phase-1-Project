@@ -68,6 +68,12 @@ navbar.forEach(navbar => {
   });
 });
 
+const button = document.getElementById('myemail');
+
+button.addEventListener('click', function() {
+  alert('Input email');
+});
+
 
 
 function addToCart(id){
